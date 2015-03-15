@@ -11,7 +11,7 @@ corr <- function(directory, threshold = 0) {
   ok_list<-complete(directory,1:332)
   ok_list<-subset(ok_list,nobs>threshold)
   if(length(ok_list[,1])==0){
-    return
+    NULL
   }else{
   correl<-numeric(length(ok_list[,1]))
   for(i in 1:length(ok_list[,1])){
